@@ -147,6 +147,88 @@
       .intro-panel{padding:28px}form{grid-template-columns:1fr;padding:22px}.field{grid-column:1/-1}
       .footer-main,.copyright{align-items:flex-start;flex-direction:column}
     }
+    
+/* Mobile-friendly Managing Committee */
+@media (max-width: 600px) {
+
+  .table-shell {
+    overflow: visible;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  table,
+  tbody {
+    display: block;
+    width: 100%;
+    min-width: 0 !important;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  tbody tr {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    grid-template-areas:
+      "number name"
+      "number designation";
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e7e3d9;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 5px 16px rgba(15, 35, 65, 0.05);
+    gap: 4px 12px;
+  }
+
+  tbody td {
+    display: block;
+    padding: 0;
+    border: none;
+    width: auto !important;
+  }
+
+  tbody td:first-child {
+    grid-area: number;
+    align-self: center;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #b28c45;
+    font-weight: bold;
+  }
+
+  tbody td:nth-child(2) {
+    grid-area: name;
+    font-size: 14px;
+    font-weight: 700;
+    color: #142d4e;
+  }
+
+  tbody td:nth-child(3) {
+    grid-area: designation;
+    margin-top: 3px;
+  }
+
+  .role {
+    font-size: 9px;
+    padding: 5px 9px;
+    background: #edf1f7;
+    color: #263f62;
+  }
+
+  .committee-count {
+    margin-bottom: 20px;
+  }
+}
   </style>
 </head>
 <body>
